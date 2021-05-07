@@ -9,9 +9,9 @@
     "lint": "eslint src --max-warnings=0"
   },
   "lint-staged": {
-    "src/**/*": {
+    "src/**/*": [
       "yarn lint --fix"
-    }
+    ]
   },
   "dependencies": {
     "next": "10.2.0",
