@@ -6,11 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --max-warnings=0"
+    "lint": "eslint \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier \"src/**/*.+(ts|js|tsx)\" --write",
+    "postinstall": "husk install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix"
+      "yarn lint --fix",
+      "yarn format"
     ]
   },
   "dependencies": {
