@@ -10,8 +10,8 @@
     "format": "prettier \"src/**/*.+(ts|js|tsx)\" --write",
     "test": "jest",
     "testw": "jest --watch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public"
   },
   "lint-staged": {
     "src/**/*": [
